@@ -31,6 +31,8 @@ body.lock {
 @import "header.scss";
 //------------------------------------------MAIN-SCREEN-------------------------------------
 .main-screen {
+    max-width: 1920px;
+    max-height: 1080px;
     padding: 286px 0px 293px 0px;
     position: relative;
     &::before {
@@ -65,7 +67,7 @@ body.lock {
         50% {
             top: 100px;
             left: 50px;
-            width: 50%;
+            width: 50%; 
             height: 80%;
         }
         100% {

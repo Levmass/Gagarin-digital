@@ -1,4 +1,5 @@
 .header {
+    margin: 40px 0px 0px 0px;
     position: relative;
 		&__container {
             max-width: 1722px;
@@ -11,35 +12,26 @@
 		}
 
 		&__logo {
-            // img {
-            //     height: 100%;
-            //     width: 100%;
-            // }
 		}
 
-		&__burder {
-            // z-index: 1;
-            // img {
-            //     height: 100%;
-            //     width: 100%;
-            //     z-index: -1;
-            // }
-            // &:hover {
-            //     cursor: pointer;
-            // }
+        &__right {
+            
+            display: flex;
+        }
 
+		&__burger {
+            margin: 0px 0px 0px 38px;
             display: block;
             position: relative;
-            top: 0;
+            top: 21px;
             right: 0;
-            // transform: translate(50%, -50%);
             width: 21px;
             height: 25.56px;
             z-index: 3;
             &::before {
                 content: '';
                 position: absolute;
-                top: -22px;
+                top: -21px;
                 left: -23px;
                 height: 67px;
                 width: 67px;
@@ -58,34 +50,12 @@
             & span:nth-child(2) {
                 top: 11.53px;
             }
-            // &:nth-child(1),
-            // &:nth-child(3) {
-            //     content: "";
-            //     background-color: #000;
-            //     position: absolute;
-            //     width: 100%;
-            //     height: 2.5px;
-            //     left: 0;
-            //     transition: all 0.3s ease 0s;
-            //     border-radius: 15px;
-            // }
             & span:nth-child(1) {
                 top: 0;
             }
             & span:nth-child(3) {
                 bottom: 0;
             }
-            // &.active span:nth-child(1) {
-            //     transform: rotate(45deg);
-            //     top: 5.28px;
-            // }
-            // &.active span:nth-child(2) {
-            //     transform: scale(0);
-            // }
-            // &.active span:nth-child(3) {
-            //     transform: rotate(-45deg);
-            //     bottom: 5.28px;
-            // }
 		}
 
 		&__menu {
@@ -99,12 +69,14 @@
             opacity: 100%;
             padding: 65px 0px 0px 0px;
             transition: all 0.8s ease 0s;
+            z-index: 2;
             &.active {
                 top: 0;
             }
 		}
 
 		&__list {
+            margin: 108px 0px 147px 236px;
             display: block;
             li {
                 position: relative;
@@ -113,29 +85,70 @@
 		}
 
 		&__link {
+            font-weight: 700;
             display: block; 
-            font-size: 24px;
+            font-size: 157px;
+            line-height: 173px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            -webkit-text-stroke: 3.8px #fff;
+            color: transparent;    
 		}
 
 		&__social {
+            max-width: 1440px;
+            margin: 0px auto 153px auto;
+            display: flex;
+            justify-content: space-between;
 		}
 
 		&__social-item {
+            
 		}
 
+        &__social-contact {
+            display: flex;
+            flex-direction: column;
+        }
+
 		&__social-email {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+            text-transform: uppercase;
+            color: #FFFFFF;
 		}
 
 		&__social-phone {
+            
+		}
+        &__social-phone-b {
+            font-size: 26px;
+            line-height: 67px;
+            color: #000000;
+		}
+        &__social-phone-w {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+            text-transform: uppercase;
+            color: #fff;
 		}
 
 		&__social-address {
+            max-width: 371px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 26px;
+            color: #FFFFFF;
 		}
 
 		&__social-icons {
+            
 		}
 
 		&__social-icon {
+            margin: 0px 40px 0px 0px;
 		}
 }
 
