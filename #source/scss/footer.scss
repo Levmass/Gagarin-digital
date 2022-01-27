@@ -1,0 +1,93 @@
+.footer {
+    padding: 90px 0px 100px 0px;
+    background: #000;
+		&__container {
+            margin: 0px 0px 0px 110px;
+		}
+
+		&__content {
+		}
+
+		&__row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+		}
+
+		&__column {
+            flex: 1 0 50%;
+            position: relative;
+		}
+
+		&__logo {
+            width: 260px;
+            height: 66px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+		}
+
+		&__contacts {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 28px;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            margin: 0px 0px 38px 0px;
+        }
+
+		&__email {
+            color: #FFFFFF;
+		}
+
+		&__tel {
+            color: #FFFFFF;
+		}
+
+		&__address {
+            p {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 26px;
+                color: #FFFFFF;
+            }
+		}
+
+		&__coyright {
+            max-width: 567px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 26px;
+            color: #FFFFFF;
+		}
+
+		&__copy {
+            margin: 0px 0px 14px 0px;
+		}
+
+		&__copy-rules {
+		}
+
+		&__socials {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            img:first-child {
+                width: 36.5px;
+                height: 36.5px;
+            }
+            img {
+                width: 41px;
+                height: 41px;
+            }
+            img:not(:last-child) {
+                margin: 0px 26.5px 0px 0px;
+            }
+            img:hover {
+                cursor: pointer;
+            }
+		}
+}
+

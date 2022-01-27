@@ -1,6 +1,7 @@
 .header {
     margin: 40px 0px 0px 0px;
     position: relative;
+    
 		&__container {
             max-width: 1722px;
 		}
@@ -12,11 +13,13 @@
 		}
 
 		&__logo {
+            background: url('../img/icons/logo-b.svg') no-repeat;
+            width: 265px;
+            height: 67px;
             &.active {
-                img{
-                    fill: #fff;
-                }
+                background: url('../img/icons/logo-w.svg') no-repeat;
             }
+            z-index: 3;
 		}
 
         &__right {
@@ -24,15 +27,17 @@
         }
 
 		&__burger {
-            margin: 0px 0px 0px 38px;
+            margin: 0px 0px 0px 61px;
             display: block;
             position: relative;
             top: 21px;
-            right: 0;
+            right: 23;
             width: 21px;
             height: 25.56px;
             z-index: 3;
-            
+            &:hover {
+                cursor: pointer;
+            }
             &::before {
                 content: '';
                 position: absolute;
@@ -90,7 +95,7 @@
             display: block;
             li {
                 position: relative;
-                margin: 0px 0px 20px 0px;
+                // margin: 0px 0px 20px 0px;
             }
 		}
 
@@ -107,7 +112,7 @@
 
 		&__social {
             max-width: 1440px;
-            margin: 0px auto 153px auto;
+            margin: 0px auto 47px auto;
             display: flex;
             justify-content: space-between;
 		}
@@ -127,6 +132,7 @@
             line-height: 24px;
             text-transform: uppercase;
             color: #FFFFFF;
+            margin: 0px 0px 8px 0px;
 		}
 
 		&__social-phone {
@@ -159,6 +165,9 @@
 
 		&__social-icon {
             margin: 0px 40px 0px 0px;
+            &:hover {
+                cursor: pointer;
+            }
 		}
 }
 
