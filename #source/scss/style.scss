@@ -6,31 +6,8 @@ body {
     background: #fff;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
+    position: relative;
 }
-// section:nth-of-type(1), section:nth-of-type(6) {
-//     background: #fff;
-// }
-
-// #fp-nav ul li a span, 
-// .fp-slidesNav ul li a span {
-//     background: transparent;
-//     width: 14.6px;
-//     height: 14.6px;
-//     border: 2.5px solid #000000;
-//     border-radius: 10px;
-//     /* margin: -4px 0 0 -4px; */
-//     margin: 6.5px 0px;
-// }  
-// #fp-nav ul li a.active span, 
-// .fp-slidesNav ul li a.active span, 
-// #fp-nav ul li:hover a.active span, 
-// .fp-slidesNav ul li:hover a.active span {
-//     width: 14.6px;
-//     height: 55.14px;
-//     background: #000000;
-//     border-radius: 10px;
-//     /* margin: -8px 0 0 -8px; */
-// }
 
 body.lock {
     overflow: hidden;
@@ -39,7 +16,6 @@ body.lock {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    
 }
 .page {
     position: absolute;
@@ -49,8 +25,30 @@ body.lock {
     height: 100%;
 }
 .container {
-    max-width: 1440px;
+    max-width: 1490px;
     margin: 0px auto;
+    padding: 0px 25px;
+}
+
+@media (max-width: 1600px) {
+    .container {
+    max-width: 1140px;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+    max-width: 960px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+    max-width: 720px;
+    }
+}
+@media (max-width: 576px) {
+    .container {
+    max-width: 540px;
+    }
 }
 
 #preloader {
@@ -90,6 +88,111 @@ body.lock {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+#toTop {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transform: rotate(90deg);
+    position: fixed;
+    bottom: 185px;
+    right: 105px;
+    z-index: 2;
+    display: none;
+    &:hover {
+        cursor: pointer;
+    }
+    &:before {
+        content: url('../img/icons/totop.svg');
+        position: absolute;
+        bottom: -21px;
+        right: -95px;
+        width: 67px;
+        height: 67px;
+        transform: rotate(270deg);
+    }
+    &._active {
+            color: #000;
+        &::before {
+            content: url('../img/icons/tobottom.svg');
+            transform: rotate(90deg);
+        }
+    }
+    @media (max-width:1700px) {
+        right: 10px;
+    }
+}
+
+#toBottom {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000;
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: 185px;
+    right: 105px;
+    z-index: 2;
+    &:hover {
+        cursor: pointer;
+    }
+    &:before {
+        content: url('../img/icons/tobottom.svg');
+        position: absolute;
+        bottom: -21px;
+        right: -95px;
+        width: 67px;
+        height: 67px;
+        transform: rotate(270deg);
+    }
+    @media (max-width:1700px) {
+        right: 10px;
+    }
+}
+
+.buttons-slider {
+    position: fixed;
+    left: 125px;
+    bottom: 77px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    &.active {
+        display: none;
+    }
+    @media (max-width:1700px) {
+        left: 55px;
+    }
+}
+.button {
+    width: 14.6px;
+    height: 14.6px;
+    border: 2.5px solid #000000;
+    border-radius: 50%;
+    background: transparent;
+    transition: all 0.3s ease 0s;
+    &:not(:last-child) {
+        margin: 0px 0px 13px 0px;
+    }
+    &.active {
+        width: 14.6px;
+        height: 55.14px;
+        background: #000000;
+        border-radius: 10px;
+        &._active {
+            background: #fff;
+        }
+    }
+    &._active {
+        border: 2.5px solid #fff;
+    }
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 //------------------------------------------HEADER------------------------------------------
@@ -192,7 +295,6 @@ body.lock {
             justify-content: space-between;
             margin: 62px auto 0px auto;
             display: flex;
-            
 		}
 
 		&__button {
@@ -205,6 +307,9 @@ body.lock {
             background: #000000;
             border: 2.5px solid #000000;
             border-radius: 56.5px;
+            &:hover {
+                cursor: pointer;
+            }
 		}
 
 		&__bottom-subtitle {
@@ -213,11 +318,43 @@ body.lock {
             line-height: 26px;
             color: #000000;
 		}
+        @media (max-width:1600px) {
+            &__subtitle {
+                font-size: 110px;
+                line-height: 150px;
+            }
+            &__container {
+                padding: 0px 40px;
+		    }
+            &__button {
+                font-size: 20px;
+                line-height: 24px;
+                padding: 15.5px 74.5px;
+                margin: 0px 20px 0px 0px;
+            }
+            &__bottom {
+                max-width: 950px;
+                margin: 0px auto 0px auto;
+            }
+            &__bottom-subtitle {
+                max-width: 450px;
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+        @media (max-width: 992px) {
+
+        }
+        @media (max-width: 768px) {
+
+        }
+        @media (max-width: 576px) {
+
+        }
 }
 
 //------------------------------------------COSMOS-------------------------------------
 .cosmos {
-    
     background: #000;
     position: relative;
     overflow: hidden;
@@ -306,6 +443,10 @@ body.lock {
     line-height: 99px;
     letter-spacing: -0.02em;
     text-transform: uppercase;
+    @media (max-width:1600px) {
+        font-size: 80px;
+        line-height: 89px;
+    }
 }
 //------------------------------------------WHAT WE DO-------------------------------------
 .whatwedo {
