@@ -997,13 +997,8 @@ body.lock {
 		}
 
 		&__column {
-            
 		}
 
-        &__hover-text {
-            
-            
-        }
         &__image {
             max-width: 465px;
             img {
@@ -1064,7 +1059,6 @@ body.lock {
             img {
                 max-width: 245px;
             }
-            
         }
         &__text {
             max-width: 245px;
@@ -1105,11 +1099,6 @@ body.lock {
             margin: 0px 0px 37px 0px;
 		}
         &__image {
-            // &:before {
-            //     width: 245px;
-            //     height: 245px;
-            //     transform: translate(-17%, -50%);
-            // }
             &:after{
                 width: 245px;
                 height: 100%;
@@ -1121,7 +1110,6 @@ body.lock {
         &__image {
             opacity: 0.2;
         }
-        
     }
     @media (max-width:650px) {
         & {
@@ -1135,9 +1123,14 @@ body.lock {
         &__column {
             margin: 0px auto;
         }
-        &__container {
+        &__row {
             margin: 0px -45px 0px 0px;
-		}
+        }
+    }
+    @media (max-width:550px) {
+        &__image {
+            opacity: 1;
+        }
     }
 
 }

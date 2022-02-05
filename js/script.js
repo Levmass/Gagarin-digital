@@ -224,7 +224,7 @@ if (document.documentElement.clientWidth <= 930) {
                     }
                 },
                 {
-                    breakpoint: 500,
+                    breakpoint: 550,
                     settings: {
                     // arrows: false,
                         slidesToShow: 1,
