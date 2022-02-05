@@ -1,93 +1,203 @@
 .footer {
-    padding: 90px 0px 100px 0px;
-    background: #000;
+      padding: 90px 0px 100px 0px;
+      background: #000;
 		&__container {
-            margin: 0px 0px 0px 110px;
+                  margin: 0px 0px 0px 110px;
 		}
 
 		&__content {
 		}
 
 		&__row {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+                  display: flex;
+                  justify-content: space-between;
+                  flex-wrap: wrap;
 		}
 
 		&__column {
-            flex: 1 0 50%;
-            position: relative;
+                  flex: 1 0 50%;
+                  position: relative;
 		}
 
 		&__logo {
-            width: 260px;
-            height: 66px;
-            img {
-                width: 100%;
-                height: 100%;
-            }
+                  width: 260px;
+                  height: 66px;
+                  img {
+                        width: 100%;
+                        height: 100%;
+                  }
 		}
 
 		&__contacts {
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 28px;
-            text-transform: uppercase;
-            display: flex;
-            flex-direction: column;
-            margin: 0px 0px 38px 0px;
-        }
+                  font-weight: 700;
+                  font-size: 20px;
+                  line-height: 28px;
+                  text-transform: uppercase;
+                  display: flex;
+                  flex-direction: column;
+                  margin: 0px 0px 38px 0px;
+                  a:first-child {
+                        margin: 0px 0px 8px 0px;
+                  }
+            }
 
 		&__email {
-            color: #FFFFFF;
+                  color: #FFFFFF;
 		}
 
 		&__tel {
-            color: #FFFFFF;
+                  color: #FFFFFF;
 		}
 
 		&__address {
-            p {
-                font-weight: 600;
-                font-size: 20px;
-                line-height: 26px;
-                color: #FFFFFF;
-            }
+                  p {
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 26px;
+                        color: #FFFFFF;
+                  }
 		}
 
 		&__coyright {
-            max-width: 567px;
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 26px;
-            color: #FFFFFF;
+                  max-width: 567px;
+                  font-weight: 600;
+                  font-size: 20px;
+                  line-height: 26px;
+                  color: #FFFFFF;
 		}
 
 		&__copy {
-            margin: 0px 0px 14px 0px;
+                  margin: 0px 0px 14px 0px;
 		}
 
 		&__copy-rules {
 		}
 
 		&__socials {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            img:first-child {
-                width: 36.5px;
-                height: 36.5px;
-            }
-            img {
-                width: 41px;
-                height: 41px;
-            }
-            img:not(:last-child) {
-                margin: 0px 26.5px 0px 0px;
-            }
-            img:hover {
-                cursor: pointer;
-            }
+                  margin: 100px 0px 0px 0px;
+                  img:first-child {
+                        width: 36.5px;
+                        height: 36.5px;
+                  }
+                  img {
+                        width: 41px;
+                        height: 41px;
+                  }
+                  img:not(:last-child) {
+                        margin: 0px 26.5px 0px 0px;
+                  }
+                  img:hover {
+                        cursor: pointer;
+                  }
 		}
+      @media (max-width:1500px) {
+            &__row {
+                  display: flex;
+                  flex-direction: column;
+		}
+            &__column {
+                  &:nth-child(1) {
+                        order: 1;
+                        
+                  }
+                  &:nth-child(2) {
+                        order: 2;
+                  }
+                  &:nth-child(3) {
+                        order: 4;
+                  }
+                  &:nth-child(4) {
+                        order: 3;
+                  }
+                  
+            }
+            &__logo {
+                  margin: 0px 0px 40px 0px;
+            }
+            &__contacts {
+                  margin: 0px 0px 20px 0px;
+            }
+            &__coyright {
+                  
+            }
+            &__socials {
+                  margin: 0px 0px 89px 0px;
+                  position: relative;
+                  &:after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 77px;
+                        width: 100%;
+                        height: 1.8px;
+                        background: #fff;
+                  }
+            }
+            &__address {
+                  margin: 0px 0px 89px 0px;
+		}
+            &__copy {
+                  margin: 0px 0px 19px 0px;
+		}
+      }
+      @media (max-width:850px) {
+            &__container {
+                  margin: 0px 0px 0px 0px;
+		}
+            &__contacts {
+                  font-size: 18px;
+                  line-height: 26px;
+            }
+            &__address {
+                  p {
+                        font-size: 18px;
+                        line-height: 24px;
+                  }
+		}
+            &__coyright {
+                  font-size: 18px;
+                  line-height: 24px;
+		}
+      }
+      @media (max-width:650px) {
+            & {
+                  padding: 35px 0px 57px 0px;
+            }
+            &__contacts {
+                  font-size: 14px;
+                  line-height: 17px;
+            }
+            &__address {
+                  p {
+                        font-size: 13px;
+                        line-height: 17px;
+                  }
+		}
+            &__coyright {
+                  font-size: 13px;
+                  line-height: 17px;
+		}
+            &__logo {
+                  width: 180px;
+                  height: 46px;
+		}
+            &__socials {
+                  
+                  img:first-child {
+                        width: 27.65px;
+                        height: 27.65px;
+                  }
+                  img {
+                        width: 31px;
+                        height: 31px;
+                  }
+                  img:not(:last-child) {
+                        margin: 0px 22.5px 0px 0px;
+                  }
+                  img:hover {
+                        cursor: pointer;
+                  }
+		}
+      }
 }
 

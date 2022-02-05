@@ -196,15 +196,58 @@ for (let i = 0; i < menu.length; i++) {
 $(document).ready(function () {
 	$('.slider').slick({
 		arrows: true,
-		dots: false,
-		slidesToShow: 3,
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 750,
+                settings: {
+                // arrows: false,
+                slidesToShow: 2
+                }
+            },
+        ]
 	});
 });
+
+if (document.documentElement.clientWidth <= 930) {
+    $(document).ready(function () {
+        $('.ourprojects__row').slick({
+            arrows: true,
+            slidesToShow: 2,
+            responsive: [
+                {
+                    breakpoint: 775,
+                    settings: {
+                    // arrows: false,
+                        slidesToShow: 1,
+                        centerMode: true
+                    }
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                    // arrows: false,
+                        slidesToShow: 1,
+                        centerMode: false
+                    }
+                },
+            ]
+        });
+    });
+};
+
+
 //----------------------------CHECKBOX ACTIVE-------------------------------
 $(document).ready(function () {
     $('.signal__chackbox-label').click(function (event) {
         $('.signal__chackbox-label').toggleClass('active');
-        $('.signal__btn').removeAttr("disabled");
+        // $('.signal__btn').toggleAttr('disabled');
+        let btn = $('.signal__btn');
+        if (btn.attr('disabled')) {
+            btn.removeAttr('disabled');
+        } else {
+            btn.attr('disabled');
+        }
     });
 });
 //----------------------------PRELOAD ScREEN--------------------------------
@@ -213,3 +256,18 @@ window.onload = function () {
         document.getElementById("preloader").style.display = "none";
     }, 1000);
 };
+
+$(document).ready(function () {
+    $('.signal__btn').click(function (event) {
+        let form = document.querySelector(".signal__form");
+        form.innerHTML = '';
+
+        let pic = document.querySelector(".load__image");
+        let title = document.querySelector(".load__title");
+        let subtitle = document.querySelector(".load__subtitle");
+
+        pic.innerHTML = '<img src="img/signal/cosmoheart.jpg">';
+        title.innerHTML = 'Заявка принята!';
+        subtitle.innerHTML ='Координаты получены.</br> Выйдем на связь в течение 60 минут.';
+    });
+});
