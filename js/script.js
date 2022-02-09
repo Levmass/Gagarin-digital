@@ -53,12 +53,19 @@ $(window).scroll(function () {
 
         if( scroll > top && scroll < bottom){
             $('#toTop').addClass('_active');
-            $('.header__burger').removeClass('_active');
+
             $('.button').removeClass('_active');
         } else {
             $('#toTop').removeClass('_active');
-            $('.header__burger').addClass('_active');
             $('.button').addClass('_active');
+        }
+
+        var topBurger  = $(el).offset().top;
+        var bottomBurger = topBurger +$(el).height();
+        if( scroll > topBurger && scroll < bottomBurger){
+            $('.header__burger').removeClass('_active');
+        } else {
+            $('.header__burger').addClass('_active');
         }
     })
     var MainScreenSection = $('.main-screen');
@@ -72,6 +79,12 @@ $(window).scroll(function () {
             $('.header__burger').removeClass('_active');
             $('.button').removeClass('_active');
         }
+
+        var topBurger  = $(el).offset().top-150;
+        var bottomBurger = topBurger +$(el).height()+300;
+        if( scroll > topBurger && scroll < bottomBurger){
+            $('.header__burger').removeClass('_active');
+        } 
     })
 });
 
@@ -97,7 +110,7 @@ $(window).scroll(function () {
     })
     cosmosSection.each(function (i, el) {
         var top  = $(el).offset().top -600;
-        var bottom = top +$(el).height()-50;
+        var bottom = top +$(el).height()+300;
         var scroll = $(window).scrollTop();
 
         if( scroll > top && scroll < bottom){
@@ -108,7 +121,7 @@ $(window).scroll(function () {
     })
     whatWeDoSection.each(function (i, el) {
         var top  = $(el).offset().top -600;
-        var bottom = top +$(el).height()+150;
+        var bottom = top +$(el).height()+300;
         var scroll = $(window).scrollTop();
 
         if( scroll > top && scroll < bottom){
@@ -118,8 +131,8 @@ $(window).scroll(function () {
         }
     })
     helloSection.each(function (i, el) {
-        var top = $(el).offset().top - 600;
-        var bottom = top + $(el).height() + 150;
+        var top = $(el).offset().top - 700;
+        var bottom = top + $(el).height() + 500;
         var scroll = $(window).scrollTop();
 
         if (scroll > top && scroll < bottom) {
@@ -130,7 +143,7 @@ $(window).scroll(function () {
     })
     ourProjectsSection.each(function (i, el) {
         var top  = $(el).offset().top -700;
-        var bottom = top +$(el).height()+200;
+        var bottom = top +$(el).height()+450;
         var scroll = $(window).scrollTop();
 
         if( scroll > top && scroll < bottom){
@@ -167,19 +180,19 @@ $('.main-screen-btn').on('click', function() {
     $("html, body").animate({ scrollTop:0}, 600);
 })
 $('.cosmos-btn').on('click', function() {
-    $("html, body").animate({ scrollTop: ($('.main-screen').height()+510) }, 600);
+    document.querySelector('.cosmos').scrollIntoView({block: "center", behavior: "smooth"});
 })
 $('.whatwedo-btn').on('click', function() {
-    $("html, body").animate({ scrollTop: ($('.main-screen').height() + $('.cosmos').height()+510 ) }, 600);
+    document.querySelector('.whatwedo').scrollIntoView({block: "center", behavior: "smooth"});
 })
 $('.hello-btn').on('click', function() {
-    $("html, body").animate({ scrollTop: ($('.main-screen').height() + $('.cosmos').height() + $('.whatwedo').height()+710 ) }, 600);
+    document.querySelector('.hello').scrollIntoView({block: "center", behavior: "smooth"});
 })
 $('.ourprojects-btn').on('click', function() {
-    $("html, body").animate({ scrollTop: ($('.main-screen').height() + $('.cosmos').height() + $('.whatwedo').height() + $('.hello').height()+1100 ) }, 600);
+    document.querySelector('.ourprojects').scrollIntoView({block: "center", behavior: "smooth"});
 })
 $('.signal-btn').on('click', function() {
-    $("html, body").animate({ scrollTop: ($(document).height() - $('.signal').height()-400) }, 600);
+    document.querySelector('.signal').scrollIntoView({block: "center", behavior: "smooth"});
 })
 
 
@@ -218,7 +231,6 @@ if (document.documentElement.clientWidth <= 930) {
                 {
                     breakpoint: 775,
                     settings: {
-                    // arrows: false,
                         slidesToShow: 1,
                         centerMode: true
                     }
@@ -226,7 +238,25 @@ if (document.documentElement.clientWidth <= 930) {
                 {
                     breakpoint: 550,
                     settings: {
-                    // arrows: false,
+                        slidesToShow: 1,
+                        centerMode: false
+                    }
+                },
+            ]
+        });
+    });
+};
+
+if (document.documentElement.clientWidth <= 650) {
+    $(document).ready(function () {
+        $('.projects-row').slick({
+            arrows: true,
+            slidesToShow: 1,
+            centerMode: true,
+            responsive: [
+                {
+                    breakpoint: 505,
+                    settings: {
                         slidesToShow: 1,
                         centerMode: false
                     }
@@ -250,13 +280,14 @@ $(document).ready(function () {
         }
     });
 });
-//----------------------------PRELOAD ScREEN--------------------------------
+//----------------------------PRELOAD SСREEN--------------------------------
 window.onload = function () {
     setTimeout(function () {
         document.getElementById("preloader").style.display = "none";
     }, 1000);
 };
 
+//----------------------------SIGNAL SUBMIT SCREEN--------------------------------
 $(document).ready(function () {
     $('.signal__btn').click(function (event) {
         let form = document.querySelector(".signal__form");
@@ -269,5 +300,74 @@ $(document).ready(function () {
         pic.innerHTML = '<img src="img/signal/cosmoheart.jpg">';
         title.innerHTML = 'Заявка принята!';
         subtitle.innerHTML ='Координаты получены.</br> Выйдем на связь в течение 60 минут.';
+    });
+});
+
+//----------------------------SEE ALL FILTER--------------------------------
+
+// let ddxColumn = document.querySelector(".seeall__column_ddx");
+// let allstarColumn = document.querySelector(".seeall__column_allstar");
+// let lithuntersColumn = document.querySelector(".seeall__column_lithunters");
+let ddxColumn = $('.seeall__column_ddx');
+let allstarColumn = $('.seeall__column_allstar');
+let lithuntersColumn = $('.seeall__column_lithunters');
+
+$(document).ready(function () {
+    $('.all-btn').click(function (event) {
+        ddxColumn.toggleClass('active');
+        allstarColumn.toggleClass('active');
+        lithuntersColumn.toggleClass('active');
+        $('.all-btn').toggleClass('active');
+        $('.seeall__mark').toggleClass('active');
+    });
+});
+$(document).ready(function () {
+    $('.ppc-btn').click(function (event) {
+        ddxColumn.toggleClass('ppc-active');
+        allstarColumn.toggleClass('ppc-active');
+        lithuntersColumn.toggleClass('ppc-active');
+        $('.ppc-btn').toggleClass('active');
+        if ($('.ppc').hasClass('active')) {
+            $('.ppc').addClass('active');
+        } else {
+            $('.ppc').toggleClass('active');
+        }
+        
+    });
+});
+$(document).ready(function () {
+    $('.seo-btn').click(function (event) {
+        $('.seo-btn').toggleClass('active');
+    });
+});
+$(document).ready(function () {
+    $('.site-btn').click(function (event) {
+        $('.site-btn').toggleClass('active');
+    });
+});
+$(document).ready(function () {
+    $('.design-btn').click(function (event) {
+        ddxColumn.toggleClass('design-active');
+        lithuntersColumn.toggleClass('design-active');
+        $('.design-btn').toggleClass('active');
+    });
+});
+$(document).ready(function () {
+    $('.filming-btn').click(function (event) {
+        ddxColumn.toggleClass('filming-active');
+        lithuntersColumn.toggleClass('filming-active');
+        $('.filming-btn').toggleClass('active');
+    });
+});
+$(document).ready(function () {
+    $('.smm-btn').click(function (event) {
+        allstarColumn.toggleClass('smm-active');
+        $('.smm-btn').toggleClass('active');
+    });
+});
+$(document).ready(function () {
+    $('.texts-bts').click(function (event) {
+        lithuntersColumn.toggleClass('texts-active');
+        $('.texts-bts').toggleClass('active');
     });
 });

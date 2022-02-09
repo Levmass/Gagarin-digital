@@ -17,12 +17,23 @@ body.lock {
     display: flex;
     flex-direction: column;
 }
+.wrapper_b {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+}
 .page {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    flex: 1 1 100%;
 }
 .container {
     max-width: 1490px;
@@ -952,8 +963,6 @@ body.lock {
     }    
 }
 
-//------------------------------------------SLIDER----------------------------------------
-@import "sider.scss";
 //------------------------------------------OUR PROJETS----------------------------------------
 .ourprojects {
     background: #000;
@@ -975,7 +984,6 @@ body.lock {
             justify-content: space-between;
             flex-wrap: wrap;
             position: relative;
-            
 		}
 
 		&__seeall-btn {
@@ -1584,3 +1592,14 @@ input[type="checkbox"] {
 
 //------------------------------------------FOOTER----------------------------------------
 @import "footer.scss";
+
+//------------------------------------------SEE ALL----------------------------------------
+@import "seeall.scss";
+
+//------------------------------------------DDX FITNESS----------------------------------------
+@import "ddxFitness.scss";
+//------------------------------------------DDX FITNESS----------------------------------------
+@import "allStar.scss";
+
+//------------------------------------------SLIDER----------------------------------------
+@import "sider.scss";

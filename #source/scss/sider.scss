@@ -101,7 +101,30 @@
 	.ourprojects__image {
 		opacity: 1;
 	}
-	
+}
+
+
+.projects-row .slick-arrow{
+	position: absolute;
+	top: 50%;
+	margin: -50px 0px 0px 0px;
+	z-index: 2;
+	font-size: 0;
+	width: 15px;
+	height: 15px;
+}
+.projects-row .slick-arrow.slick-prev{
+	left: 0;
+	background: url('../img/hello/arrow-l.svg') 0 0 / 100% no-repeat;
+}
+.projects-row .slick-arrow.slick-next{
+	right: 0;
+	background: url('../img/hello/arrow-r.svg') 0 0 / 100% no-repeat;
+}
+.projects-row .slick-slide.slick-active{
+	.ourprojects__image {
+		opacity: 1;
+	}
 }
 
 .slider .slick-arrow.slick-disabled{
