@@ -212,7 +212,6 @@
 		}
     @media (max-width: 1100px) {
         &__title {
-            color: #FFFFFF;
             margin: 0px 0px 90px 0px;
 		}
         &__image {
@@ -241,7 +240,6 @@
     }
     @media (max-width: 850px) {
         &__title {
-            color: #FFFFFF;
             margin: 0px 0px 60px 0px;
 		}
         &__image {
@@ -264,7 +262,6 @@
     }
     @media (max-width: 650px) {
         &__title {
-            color: #FFFFFF;
             margin: 0px 0px 23px 0px;
 		}
         &__column {
@@ -392,7 +389,7 @@
     margin: 100px 0px 90px 0px;
 }
 .m-s__column {
-    max-width: 522px;
+    max-width: 562px;
     padding: 30px 20px;
 }
 .m-s__title {
@@ -582,7 +579,6 @@
 		}
 
 		&__content {
-
             @media (max-width: 1500px) {
                 margin: 0px -80px 0px 0px;
             }
@@ -617,19 +613,25 @@
             &__title {
                 padding: 150px 0px 82px 0px;
             }
-            padding: 0px 0px 200px 0px;
+            & {
+                padding: 0px 0px 200px 0px;
+            }    
         }
         @media (max-width: 850px) {
             &__title {
                 padding: 150px 0px 82px 0px;
             }
-            padding: 0px 0px 180px 0px;
+            & {
+                padding: 0px 0px 180px 0px;
+            }    
         }
         @media (max-width: 650px) {
             &__title {
                 padding: 100px 0px 56px 0px;
             }
-            padding: 0px 0px 152px 0px;
+            & {
+                padding: 0px 0px 152px 0px;
+            }    
         }
 }
 .seall-btn {
