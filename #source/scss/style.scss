@@ -1330,6 +1330,8 @@ body.lock {
             border-radius: 23.5px;
             margin: 0px 60px 0px 0px;
             outline: none;
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+            -webkit-tap-highlight-color: transparent; 
             &:active {
                 background: transparent;
             }
