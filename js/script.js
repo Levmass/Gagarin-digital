@@ -24,6 +24,25 @@ window.onscroll = function() {
 $('#toBottom').on('click', function() {
     $("html, body").animate({ scrollTop: ($('.signal').offset().top) }, 600);
 })
+$('.main-screen__button').on('click', function() {
+    $("html, body").animate({ scrollTop: ($('.signal').offset().top) }, 600);
+})
+$('.header__link_1').on('click', function () {
+    $('.header__burger,.header__menu').toggleClass('active');
+    $('.header__logo').toggleClass('active');
+    $('.header__logo-w').toggleClass('active');
+    $('.header__social-phone-b').toggleClass('active');
+    $('body').toggleClass('lock');
+    $("html, body").animate({ scrollTop: ($('.whatwedo').offset().top) }, 600);
+})
+$('.header__link_3').on('click', function () {
+    $('.header__burger,.header__menu').toggleClass('active');
+    $('.header__logo').toggleClass('active');
+    $('.header__logo-w').toggleClass('active');
+    $('.header__social-phone-b').toggleClass('active');
+    $('body').toggleClass('lock');
+    $("html, body").animate({ scrollTop: ($('.signal').offset().top) }, 600);
+})
 
 $(function () {
     $(window).scroll(function () {
