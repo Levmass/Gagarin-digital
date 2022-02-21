@@ -86,10 +86,10 @@
                         width: 41px;
                         height: 41px;
                   }
-                  img:not(:last-child) {
+                  a:not(:last-child) {
                         margin: 0px 26.5px 0px 0px;
                   }
-                  img:hover {
+                  a:hover, img:hover {
                         cursor: pointer;
                   }
 		}
@@ -194,10 +194,10 @@
                         width: 31px;
                         height: 31px;
                   }
-                  img:not(:last-child) {
+                  a:not(:last-child) {
                         margin: 0px 22.5px 0px 0px;
                   }
-                  img:hover {
+                  a:hover {
                         cursor: pointer;
                   }
 		}

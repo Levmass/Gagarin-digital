@@ -19,6 +19,10 @@ a:focus, a:active {
   outline: none;
 }
 
+a, a:hover, a:focus, a:active, button, button:focus, button:active {
+  outline: none !important;
+}
+
 nav, footer, header, aside {
   display: block;
 }
@@ -2099,10 +2103,10 @@ input[type=checkbox] {
   width: 41px;
   height: 41px;
 }
-.footer__socials img:not(:last-child) {
+.footer__socials a:not(:last-child) {
   margin: 0px 26.5px 0px 0px;
 }
-.footer__socials img:hover {
+.footer__socials a:hover, .footer__socials img:hover {
   cursor: pointer;
 }
 @media (max-width: 1500px) {
@@ -2206,10 +2210,10 @@ input[type=checkbox] {
     width: 31px;
     height: 31px;
   }
-  .footer__socials img:not(:last-child) {
+  .footer__socials a:not(:last-child) {
     margin: 0px 22.5px 0px 0px;
   }
-  .footer__socials img:hover {
+  .footer__socials a:hover {
     cursor: pointer;
   }
 }
