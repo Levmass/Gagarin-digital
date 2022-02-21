@@ -18,10 +18,11 @@ window.onscroll = function() {
         document.querySelector(".header__burger").style.top = "-150px";
     }
     prevScrollpos = currentScrollPos;
-} 
+}
+
 //----------------------------TO TOP AND BOTTOM BUTTONS------------------------
 $('#toBottom').on('click', function() {
-    $("html, body").animate({ scrollTop: ($(document).height() - $('.signal').height()-400) }, 600);
+    $("html, body").animate({ scrollTop: ($('.signal').offset().top) }, 600);
 })
 
 $(function () {
@@ -29,16 +30,24 @@ $(function () {
         if($(this).scrollTop() > 800 ) {
             $('#toTop').fadeIn("slow", function () {
             });
+            // $('.header__burger').css('margin-top','60px');
+            // $('.header__burger').css('right', '150px');
+            // $('.header__burger').css('top','0px');
+            // document.querySelector(".header__burger").style.position = "fixed";
         } else {
             $('#toTop').fadeOut("slow", function () {
             });
+            // document.querySelector(".header__burger").style.position = "absolute";
+            // $('.header__burger').css('margin-top','0px');
+            // $('.header__burger').css('right', '40px');
+            // $('.header__burger').css('margin-top','20px');
         }
     });
 
+    
     $('#toTop').click(function(event) {
         $('html,body').animate({scrollTop:0},600);
     });
-    
 });
 
 
@@ -180,20 +189,25 @@ $('.main-screen-btn').on('click', function() {
     $("html, body").animate({ scrollTop:0}, 600);
 })
 $('.cosmos-btn').on('click', function() {
-    document.querySelector('.cosmos').scrollIntoView({block: "center", behavior: "smooth"});
+    // document.querySelector('.cosmos').scrollIntoView({ block: "center", behavior: "smooth" });
+    $("html, body").animate({ scrollTop: ($('.cosmos').offset().top) }, 600);
 })
 $('.whatwedo-btn').on('click', function() {
-    document.querySelector('.whatwedo').scrollIntoView({block: "center", behavior: "smooth"});
+    // document.querySelector('.whatwedo').scrollIntoView({ block: "center", behavior: "smooth" });
+    $("html, body").animate({ scrollTop: ($('.whatwedo').offset().top) }, 600);
 })
 $('.hello-btn').on('click', function() {
-    document.querySelector('.hello').scrollIntoView({block: "center", behavior: "smooth"});
+    // document.querySelector('.hello').scrollIntoView({ block: "center", behavior: "smooth" });
+    $("html, body").animate({ scrollTop: ($('.hello').offset().top) }, 600);
 })
 $('.ourprojects-btn').on('click', function() {
-    document.querySelector('.ourprojects').scrollIntoView({block: "center", behavior: "smooth"});
+    // document.querySelector('.ourprojects').scrollIntoView({ block: "center", behavior: "smooth" });
+    $("html, body").animate({ scrollTop: ($('.ourprojects').offset().top) }, 600);
 })
 $('.signal-btn').on('click', function() {
-    document.querySelector('.signal').scrollIntoView({block: "center", behavior: "smooth"});
+    $("html, body").animate({ scrollTop: ($('.signal').offset().top) }, 600);
 })
+
 
 
 //----------------------------WHAT WE DO OPEN MENU------------------------

@@ -455,7 +455,7 @@ body.lock {
   margin: 60px 0px 0px 0px;
   position: fixed;
   top: 0px;
-  right: 150px;
+  right: 149px;
   width: 21px;
   height: 25.56px;
   z-index: 3;
@@ -525,7 +525,7 @@ body.lock {
     top: 7px;
   }
   .header__burger::before {
-    top: -17px;
+    top: -16px;
     left: -16px;
     height: 46px;
     width: 46px;
@@ -1751,6 +1751,9 @@ body.lock {
   border-radius: 23.5px;
   margin: 0px 60px 0px 0px;
 }
+.signal__btn:active {
+  background: transparent;
+}
 .signal__checkboxes {
   font-weight: 600;
   font-size: 20px;
@@ -1760,23 +1763,41 @@ body.lock {
 .signal__agree {
   margin: 0px 0px 20px 0px;
 }
-.signal__chackbox-label:before {
-  content: " ";
-  color: #000;
-  display: inline-block;
+.signal__chackbox-label {
   position: relative;
-  width: 22px;
-  height: 22px;
-  background: transparent;
-  border: 2px solid #000;
-  border-radius: 50%;
-  margin: 0px 32px 0px 0px;
+  display: block;
+  max-width: 333px;
+}
+.signal__chackbox-label span {
+  padding: 0px 0px 0px 50px;
+}
+.signal__chackbox-label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/signal/check-round.svg") no-repeat;
+  width: 24px;
+  height: 24px;
 }
 .signal__chackbox-label.active:before {
-  background: url("../img/signal/check.png") 50%/50% no-repeat;
+  background: url("../img/signal/checkbox.svg") no-repeat;
 }
 .signal__chackbox-label:hover::before {
   cursor: pointer;
+}
+.signal__callback {
+  position: relative;
+  padding: 0px 0px 0px 50px;
+}
+.signal__callback:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url("../img/signal/callback.svg");
 }
 .signal__callback img {
   margin: 0px 24px 0px 0px;

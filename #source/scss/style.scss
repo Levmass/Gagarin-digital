@@ -1329,6 +1329,9 @@ body.lock {
             border: 1.8px solid #000000;
             border-radius: 23.5px;
             margin: 0px 60px 0px 0px;
+            &:active {
+                background: transparent;
+            }
 		}
 
 		&__checkboxes {
@@ -1346,20 +1349,36 @@ body.lock {
 		}
 
         &__chackbox-label {
-            &:before {
-                content: " ";
-                color: #000;
-                display: inline-block;
-                position: relative;
-                width: 22px;
-                height: 22px;
-                background: transparent;
-                border: 2px solid #000;
-                border-radius: 50%;
-                margin: 0px 32px 0px 0px;
+            position: relative;
+            display: block;
+            max-width: 333px;
+            span {
+                padding: 0px 0px 0px 50px;
             }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url('../img/signal/check-round.svg') no-repeat;
+                width: 24px;
+                height: 24px;
+            }
+            // &:before {
+            //     content: " ";
+            //     color: #000;
+            //     display: inline-block;
+            //     position: relative;
+            //     width: 22px;
+            //     height: 22px;
+            //     background: transparent;
+            //     border: 2px solid #000;
+            //     border-radius: 50%;
+            //     margin: 0px 32px 0px 0px;
+            // }
             &.active:before {
-                background: url('../img/signal/check.png') 50%/50% no-repeat;
+                background: url('../img/signal/checkbox.svg') no-repeat;
             }
             &:hover::before {
                 cursor: pointer;
@@ -1367,6 +1386,17 @@ body.lock {
         }
 
 		&__callback {
+            position: relative;
+            padding: 0px 0px 0px 50px;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 24px;
+                height: 24px;
+                background: url('../img/signal/callback.svg');
+            }
             img {
                 margin: 0px 24px 0px 0px;
             }
@@ -1595,12 +1625,11 @@ input[type="checkbox"] {
 
 //------------------------------------------SEE ALL----------------------------------------
 @import "seeall.scss";
-
 //------------------------------------------DDX FITNESS----------------------------------------
 @import "ddxFitness.scss";
-//------------------------------------------DDX FITNESS----------------------------------------
+//------------------------------------------ALL STAR----------------------------------------
 @import "allStar.scss";
-//------------------------------------------DDX FITNESS----------------------------------------
+//------------------------------------------LITHUNTERS----------------------------------------
 @import "lithunters.scss";
 
 //------------------------------------------SLIDER----------------------------------------
