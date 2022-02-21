@@ -1750,6 +1750,7 @@ body.lock {
   border: 1.8px solid #000000;
   border-radius: 23.5px;
   margin: 0px 60px 0px 0px;
+  outline: none;
 }
 .signal__btn:active {
   background: transparent;
@@ -2083,6 +2084,7 @@ input[type=checkbox] {
   margin: 0px 0px 14px 0px;
 }
 .footer__socials {
+  outline: none;
   margin: 100px 0px 0px 0px;
 }
 .footer__socials img:first-child {
