@@ -65,6 +65,8 @@
 	font-size: 0;
 	width: 35px;
 	height: 35px;
+	border-radius: 50%;
+	outline: none;
 	@media (max-width:650px) {
 		width: 15px;
 		height: 15px;
@@ -88,6 +90,8 @@
 	font-size: 0;
 	width: 15px;
 	height: 15px;
+	border-radius: 50%;
+	outline: none;
 }
 .ourprojects__row .slick-arrow.slick-prev{
 	left: 0;
@@ -112,6 +116,8 @@
 	font-size: 0;
 	width: 15px;
 	height: 15px;
+	border-radius: 50%;
+	outline: none;
 }
 .projects-row .slick-arrow.slick-prev{
 	left: 0;

@@ -238,6 +238,8 @@ for (let i = 0; i < menu.length; i++) {
         subtitleItem[i].classList.toggle('active');
     });
 };
+
+
 //----------------------------SLICK SIDER----------------------------------
 $(document).ready(function () {
 	$('.slider').slick({

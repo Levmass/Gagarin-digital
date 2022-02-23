@@ -274,19 +274,15 @@ body.lock {
 @import "header.scss";
 //------------------------------------------MAIN-SCREEN-------------------------------------
 .main-screen {
-    // margin: -107px 0px 0px 0px;
-    padding: 200px 0px 194px 0px;
+    margin: -107px 0px 0px 0px;
+    padding: 307px 0px 194px 0px;
     overflow: hidden;
     position: relative;
-    // width: 1920px;
-    // height: 1080px;
     &::before {
         content: '';
         position: absolute;
-        top: 0px;
-        left: 0;
-        // width: 60%;
-        // height: 100%;
+        top: 50px;
+        left: 0px;
         width: 1208px;
         height: 1208px;
         min-width: 604px;
@@ -294,15 +290,12 @@ body.lock {
         background: radial-gradient(50% 50% at 50% 50%, #14FFF1 0%, rgba(192, 255, 251, 0) 100%);
         animation: blue 15s ease infinite;
         z-index: -1;
-        
     }
     &::after {
         content: '';
         position: absolute;
-        top: 0px;
-        right: 50px;
-        // width: 60%;
-        // height: 110%;
+        top: -100px;
+        right: -100px;
         width: 1470px;
         height: 1470px;
         min-width: 604px;
@@ -314,78 +307,112 @@ body.lock {
         
     @keyframes blue {
         0% {
-            top: 0px;
-            left: 0;
-            // width: 60%;
-            // height: 100%;
-            width: 1208px;
-            height: 1208px;
+            top: 50px;
+            left: 0px;
         }
         50% {
-            top: 0px;
-            left: 50px;
-            // width: 50%; 
-            // height: 80%;
-            width: 1007px;
-            height: 966px;
+            top: -100px;
+            left: -100px;
         }
         100% {
-            top: 0px;
-            left: 0;
-            // width: 60%;
-            // height: 100%;
-            width: 1208px;
-            height: 1208px;
+            top: 50px;
+            left: 0px;
         }
     }
     @keyframes pink {
         0% {
-            top: 0px;
-            right: 50px;
-            // width: 60%;
-            // height: 110%;
-            width: 1470px;
-            height: 1470px;
+            top: -100px;
+            right: -100px;
         }
         50% {
-            top: 0px;
-            right: 100px;
-            // width: 80%;
-            // height: 120%;
-            width: 1840px;
-            height: 1347px;
+            top: 100px;
+            right: 50px;
         }
         100% {
-            top: 0px;
-            right: 50px;
-            // width: 60%;
-            // height: 110%;
-            width: 1470px;
-            height: 1470px;
+            top: -100px;
+            right: -100px;
+        }
+    }
+    @media (max-width: 1600px) {
+        &::before {
+            width: 1000px;
+            height: 1000px;
+        }
+        &::after {
+            width: 1150px;
+            height: 1150px;
+        }
+    }
+    @media (max-width: 1400px) {
+        &::before {
+            margin: 0px 0px 0px -100px;
+            width: 1000px;
+            height: 1000px;
+        }
+        &::after {
+            margin: 0px -100px 0px 0px;
+            width: 1000px;
+            height: 1000px;
+        }
+    }
+    @media (max-width: 1100px) {
+        &::before {
+            margin: 0px 0px 0px -100px;
+            width: 800px;
+            height: 800px;
+        }
+        &::after {
+            margin: 0px -100px 0px 0px;
+            width: 800px;
+            height: 800px;
         }
     }
     @media (max-width: 900px) {
         &::before {
-            margin: 0px 0px 0px -150px;
+            margin: 0px 0px 0px -100px;
+            width: 700px;
+            height: 700px;
+        }
+        &::after {
+            margin: 0px -100px 0px 0px;
+            width: 800px;
+            height: 800px;
+        }
+    }
+    @media (max-width: 750px) {
+        &::before {
+            margin: 0px 0px 0px -100px;
+            width: 650px;
+            height: 650px;
         }
         &::after {
             margin: 0px -150px 0px 0px;
+            width: 650px;
+            height: 650px;
         }
     }
     @media (max-width: 650px) {
         &::before {
-            margin: 0px 0px 0px -200px;
+            margin: 0px 0px 0px -150px;
+            width: 600px;
+            height: 600px;
         }
         &::after {
-            margin: 0px -200px 0px 0px;
+            margin: 0px -150px 0px 0px;
+            width: 600px;
+            height: 600px;
         }
     }
     @media (max-width: 450px) {
         &::before {
-            margin: 0px 0px 0px -300px;
+            margin: 0px 0px 0px -250px;
+            width: 400px;
+            height: 400px;
         }
         &::after {
-            margin: 0px -300px 0px 0px;
+            margin: 0px -250px 0px 0px;
+            width: 400px;
+            height: 400px;
         }
     }
 		&__container {
@@ -471,7 +498,7 @@ body.lock {
         }
         @media (max-width: 1100px) {
             & {
-                padding: 120px 0px 137px 0px;
+                padding: 227px 0px 137px 0px;
             }
             &__subtitle {
                 font-size: 79px;
@@ -501,6 +528,10 @@ body.lock {
 		    }
         }
         @media (max-width: 650px) {
+            & {
+                margin: -69px 0px 0px 0px;
+                padding: 189px 0px 137px 0px;
+            }
             &__subtitle {
                 font-size: 59px;
                 line-height: 65px;
@@ -792,7 +823,7 @@ body.lock {
             line-height: 26px;
             color: #FFFFFF;
             display: none;
-            transition: all 1s ease 0s;
+            transition: all 0.3s ease 0s;
             &.active {
                 display: block;
             }
@@ -801,9 +832,10 @@ body.lock {
 		&__menu {
             width: 54px;
             height: 54px;
+            border-radius: 50%;
+            outline: none;
             img {
-                transition: all 0.5s ease 0s;
-                // width: 100%;
+                transition: all 0.3s ease 0s;
                 height: 100%;
             }
             &.active {
@@ -813,8 +845,26 @@ body.lock {
             }
             &:hover {
                 cursor: pointer;
+                animation: button 0.4s ease 0s;
             }
 		}
+        @keyframes button {
+            0% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(25deg);
+            }
+            50% {
+                transform: rotate(-25deg);
+            }
+            75% {
+                transform: rotate(25deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
     @media (max-width:1100px) {
         & {
             padding: 136px 0px 80px 0px;
@@ -1206,8 +1256,6 @@ body.lock {
         position: absolute;
         top: -300px;
         left: -300px;
-        // width: 60%;
-        // height: 100%;
         width: 1353px;
         height: 1353px;
         min-width: 675px;
@@ -1221,8 +1269,6 @@ body.lock {
         position: absolute;
         top: 0;
         right: -200px;
-        // width: 80%;
-        // height: 120%;
         width: 1667px;
         height: 1667px;
         min-width: 830px;
@@ -1235,76 +1281,110 @@ body.lock {
         0% {
             top: -200px;
             left: -200px;
-            // width: 60%;
-            // height: 100%;
-            width: 1353px;
-            height: 1353px;
         }
         50% {
             top: 0;
             left: -100px;
-            // width: 90%; 
-            // height: 110%;
-            width: 1804px;
-            height: 1488px;
         }
         100% {
             top: -200px;
             left: -200px;
-            // width: 60%;
-            // height: 100%;
-            width: 1353px;
-            height: 1353px;
         }
     }
     @keyframes pink2 {
         0% {
             top: 0;
             right: -200px;
-            // width: 80%;
-            // height: 120%;
-            width: 1667px;
-            height: 1667px;
         }
         50% {
             top: -300px;
             right: -300px;
-            // width: 60%;
-            // height: 100%;
-            width: 1390px;
-            height: 1390px; 
         }
         100% {
             top: 0;
             right: -200px;
-            // width: 80%;
-            // height: 120%;
-            width: 1667px;
-            height: 1667px;
+        }
+    }
+    @media (max-width: 1600px) {
+        &::before {
+            width: 1150px;
+            height: 1150px;
+        }
+        &::after {
+            width: 1300px;
+            height: 1300px;
+        }
+    }
+    @media (max-width: 1400px) {
+        &::before {
+            margin: 0px 0px 0px -50px;
+            width: 1000px;
+            height: 1000px;
+        }
+        &::after {
+            margin: 0px -50px 0px 0px;
+            width: 1200px;
+            height: 1200px;
+        }
+    }
+    @media (max-width: 1100px) {
+        &::before {
+            margin: 0px 0px 0px -100px;
+            width: 1000px;
+            height: 1000px;
+        }
+        &::after {
+            margin: 0px -100px 0px 0px;
+            width: 1100px;
+            height: 1100px;
         }
     }
     @media (max-width: 900px) {
         &::before {
-            margin: 0px 0px 0px -150px;
+            margin: 0px 0px 0px -100px;
+            width: 850px;
+            height: 850px;
+        }
+        &::after {
+            margin: 0px -100px 0px 0px;
+            width: 950px;
+            height: 950px;
+        }
+    }
+    @media (max-width: 750px) {
+        &::before {
+            margin: 0px 0px 0px -100px;
+            width: 800px;
+            height: 800px;
         }
         &::after {
             margin: 0px -150px 0px 0px;
+            width: 900px;
+            height: 900px;
         }
     }
     @media (max-width: 650px) {
         &::before {
-            margin: 0px 0px 0px -200px;
+            margin: 0px 0px 0px -150px;
+            width: 700px;
+            height: 700px;
         }
         &::after {
-            margin: 0px -200px 0px 0px;
+            margin: 0px -150px 0px 0px;
+            width: 800px;
+            height: 800px;
         }
     }
     @media (max-width: 450px) {
         &::before {
-            margin: 0px 0px 0px -300px;
+            margin: 0px 0px 0px -250px;
+            width: 500px;
+            height: 500px;
         }
         &::after {
-            margin: 0px -300px 0px 0px;
+            margin: 0px -250px 0px 0px;
+            width: 600px;
+            height: 600px;
         }
     }
 		&__container {
